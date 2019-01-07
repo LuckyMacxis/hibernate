@@ -1,0 +1,23 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="test">
+        <class>Model.Video</class>
+        <class>Model.Codec_commercial</class>
+        <class>Model.Player</class>
+        <class>Model.Codec</class>
+        <class>Model.Format</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"></property>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test"></property>
+            <property name="javax.persistence.jdbc.user" value="phpmyadmin"></property>
+            <property name="javax.persistence.jdbc.password" value="123"></property>
+            <property name="hibernate.connection.pool_size" value="10"></property>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"></property>
+            <property name="hibernate.show_sql" value="true"></property>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"></property>
+            <property name="hibernate.hbm2ddl.auto" value="create"></property>
+        </properties>
+    </persistence-unit>
+</persistence>
